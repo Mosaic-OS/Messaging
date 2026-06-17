@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:ellipsize="end"
+            android:textColor="?android:attr/textColorSecondary"
             style="@style/ContactListItemDetail" />
 
     </LinearLayout>

@@ -52,14 +52,14 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal" >
-        <TextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/exit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/exit"
             style="@style/PromoScreenButtonStyle" />
-        <TextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/next"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -67,7 +67,7 @@
             android:text="@string/next_with_arrow"
             android:contentDescription="@string/next"
             style="@style/PromoScreenButtonStyle" />
-        <TextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/settings"
             android:layout_width="0dp"
             android:layout_height="match_parent"

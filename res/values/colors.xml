@@ -81,7 +81,7 @@
     <color name="contact_picker_tab_pressed">#ddffffff</color>
     <color name="contact_picker_tab_underline">@android:color/white</color>
     <color name="contact_list_alphabet_header">@color/lineage_accent</color>
-    <color name="contact_picker_background">#ffffff</color>
+    <color name="contact_picker_background">@android:color/system_neutral1_50</color>
     <color name="chips_dropdown_background_activated">#4285f4</color>
     <color name="chips_dropdown_background_pressed">#ededed</color>
     <color name="chips_background_color">#33000000</color>

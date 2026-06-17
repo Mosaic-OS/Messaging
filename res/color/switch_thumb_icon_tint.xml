@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Checked: tint the thumb icon with colorPrimary (light) so the checkmark contrasts
+        against the dark on-primary thumb. The Material 3 default uses colorOnPrimaryContainer,
+        which is too dark in this dynamic-color palette (dark check on a dark thumb).
+    -->
+    <item android:state_checked="true" android:color="?attr/colorPrimary" />
+    <!-- Unchecked: a dark surface tone (stable M3 role) so the X reads on the light outline
+         thumb, matching the previously-correct default. -->
+    <item android:color="?attr/colorSurfaceVariant" />
+</selector>

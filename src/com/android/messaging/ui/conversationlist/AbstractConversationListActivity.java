@@ -19,7 +19,6 @@ package com.android.messaging.ui.conversationlist;
 import static com.android.messaging.util.ChangeDefaultSmsAppHelper.REQUEST_SET_DEFAULT_SMS_APP;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -48,6 +47,8 @@ import com.android.messaging.ui.conversationlist.MultiSelectActionModeCallback.S
 import com.android.messaging.util.ChangeDefaultSmsAppHelper;
 import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.UiUtils;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -125,7 +126,7 @@ public abstract class AbstractConversationListActivity extends BugleActionBarAct
             return;
         }
 
-        new AlertDialog.Builder(this, R.style.AlertDialogTheme)
+        new MaterialAlertDialogBuilder(this)
                 .setTitle(getResources().getQuantityString(
                         R.plurals.delete_conversations_confirmation_dialog_title,
                         conversations.size()))
@@ -192,7 +193,7 @@ public abstract class AbstractConversationListActivity extends BugleActionBarAct
     @Override
     public void onActionBarBlock(final SelectedConversation conversation) {
         final Resources res = getResources();
-        new AlertDialog.Builder(this, R.style.AlertDialogTheme)
+        new MaterialAlertDialogBuilder(this)
                 .setTitle(res.getString(R.string.block_confirmation_title,
                         conversation.otherParticipantNormalizedDestination))
                 .setMessage(res.getString(R.string.block_confirmation_message))

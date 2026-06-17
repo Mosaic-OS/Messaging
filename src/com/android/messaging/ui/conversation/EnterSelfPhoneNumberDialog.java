@@ -21,16 +21,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.messaging.R;
 import com.android.messaging.datamodel.ParticipantRefresh;
 import com.android.messaging.util.BuglePrefs;
 import com.android.messaging.util.UiUtils;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 /**
  * The dialog for the user to enter the phone number of their sim.
@@ -50,12 +52,13 @@ public class EnterSelfPhoneNumberDialog extends DialogFragment {
     public Dialog onCreateDialog(final Bundle savedInstanceState) {
         final Context context = getActivity();
         final LayoutInflater inflater = LayoutInflater.from(context);
-        mEditText = (EditText) inflater.inflate(R.layout.enter_phone_number_view, null, false);
+        final View view = inflater.inflate(R.layout.enter_phone_number_view, null, false);
+        mEditText = view.findViewById(R.id.phone_number_edit);
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
         builder.setTitle(R.string.enter_phone_number_title)
                 .setMessage(R.string.enter_phone_number_text)
-                .setView(mEditText)
+                .setView(view)
                 .setNegativeButton(android.R.string.cancel, (dialog, button) -> dismiss())
                 .setPositiveButton(android.R.string.ok, (dialog, button) -> {
                     final String newNumber = mEditText.getText().toString();

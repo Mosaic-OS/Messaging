@@ -5,6 +5,7 @@
 -->
 <com.google.android.material.materialswitch.MaterialSwitch
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/switchWidget"
     android:forceDarkAllowed="false"
     android:theme="@style/Theme.Material3.DynamicColors.DayNight"
@@ -12,4 +13,6 @@
     android:layout_height="wrap_content"
     android:background="@null"
     android:clickable="false"
-    android:focusable="false" />
+    android:focusable="false"
+    app:thumbIcon="@drawable/switch_thumb_icon"
+    app:thumbIconTint="@color/switch_thumb_icon_tint" />
