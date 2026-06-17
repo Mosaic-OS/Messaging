@@ -59,7 +59,7 @@ public class ConversationListAdapter
         final LayoutInflater layoutInflater = LayoutInflater.from(context);
         final ConversationListItemView itemView =
                 (ConversationListItemView) layoutInflater.inflate(
-                        R.layout.conversation_list_item_view, null);
+                        R.layout.conversation_list_item_view, parent, false);
         return new ConversationListViewHolder(itemView);
     }
 

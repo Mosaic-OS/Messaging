@@ -54,7 +54,7 @@ messaging_java_defaults {
 
 
 android_app {
-    name: "messaging",
+    name: "Messaging",
 
     srcs: ["src/**/*.java"],
 
@@ -84,9 +84,9 @@ android_app {
 
     aaptflags: [
         "--version-name",
-        "1.0.001",
+        "1.0.1",
         "--version-code",
-        "10001040",
+        "10001041",
     ],
     required: [
         "libframesequence",
